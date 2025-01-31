@@ -1,6 +1,5 @@
 # PINNs-for-IEEE-systems
-This library provides power system dynamic solvers implemented in PyTorch based on the simultaneous solution algorithm. The developed algorithms, based on Runge-Kutta integration schemes, allow the integration of Physics-Informed Neural Networks (PINNs), boosting their computation performance and unlocking a wide range of modeling and privacy opportunities. The solvers are implemented using test systems from the IEEE test system library available at [ieeelib](http:
-//publish.illinois.edu/smartergrid/).
+This library provides power system dynamic solvers implemented in PyTorch based on the simultaneous solution algorithm. The developed algorithms, based on Runge-Kutta integration schemes, allow the integration of Physics-Informed Neural Networks (PINNs), boosting their computation performance and unlocking a wide range of modeling and privacy opportunities. The solvers are implemented using test systems from the IEEE test system library available at [ieeelib](http://publish.illinois.edu/smartergrid/).
 
 PINNs are integrated as a more accurate alternative to traditional Runge-Kutta schemes over larger time steps.
 
@@ -48,7 +47,7 @@ The following tables include more detailed information on the results provided i
 |$Vm_{19}$  | 4.16      |$Vm_{20}$  | 4.18      |$Vm_{21}$  | 4.29      |$Vm_{22}$  | 4.31      |$Vm_{23}$  | 4.25      |$Vm_{24}$  | 4.55      |
 |$Vm_{25}$  | 5.51      |$Vm_{26}$  | 5.51      |$Vm_{27}$  | 6.19      |$Vm_{28}$  | 5.46      |$Vm_{29}$  | 6.19      |$Vm_{30}$  | 6.19      |
 
-#### IEEE 30-Bus System ($G^{1}_{-0.3})
+#### IEEE 30-Bus System ($G^{1}_{-0.3}$)
 | Variable  | Value (%)  | Variable  | Value (%)  | Variable  | Value (%)  | Variable  | Value (%)  | Variable  | Value (%)  | Variable  | Value (%)  |
 |-----------|--------|-----------|--------|-----------|--------|-----------|--------|-----------|--------|-----------|--------|
 |$\delta_{1}$ | 0.74      |$\delta_{2}$ | 39.74     |$\delta_{5}$ | 7.96      |$\delta_{8}$ | 21.69     |$\delta_{11}$ | 0.64      |$\delta_{13}$ | 0.95      |
@@ -61,7 +60,7 @@ The following tables include more detailed information on the results provided i
 |$Vm_{19}$  | 3.17      |$Vm_{20}$  | 3.19      |$Vm_{21}$  | 3.28      |$Vm_{22}$  | 3.29      |$Vm_{23}$  | 3.14      |$Vm_{24}$  | 3.34      |
 |$Vm_{25}$  | 3.86      |$Vm_{26}$  | 3.86      |$Vm_{27}$  | 4.13      |$Vm_{28}$  | 3.67      |$Vm_{29}$  | 4.13      |$Vm_{30}$  | 4.13      |
 
-#### IEEE 30-Bus System ($L^{12}_{-0.11})
+#### IEEE 30-Bus System ($L^{12}_{-0.11}$)
 | Variable  | Value (%)  | Variable  | Value (%)  | Variable  | Value (%)  | Variable  | Value (%)  | Variable  | Value (%)  | Variable  | Value (%)  |
 |-----------|--------|-----------|--------|-----------|--------|-----------|--------|-----------|--------|-----------|--------|
 |$\delta_{1}$ | 3.55      |$\delta_{2}$ | 34.44     |$\delta_{5}$ | 11.30     |$\delta_{8}$ | 12.89     |$\delta_{11}$ | 0.08      |$\delta_{13}$ | 0.17      |
