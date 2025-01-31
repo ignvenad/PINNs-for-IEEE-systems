@@ -21,6 +21,7 @@ We support two types of network disturbances: load and mechanical torque. These 
 To include the PINN in any of the simulations, add the bus number of the dynamic component to be represented by a PINN in the pinn_models_list. In the paper, we considered a PINN for bus 2 in the 9-bus system and bus 1 in the 14- and 30-bus systems.
 The sim_time and sim_time_step apply the desired simulation time and time step size, respectively.
 Different plots can be selected in the post-processing module.
+The parameters of the system and dynamic components can be found in the Cases and Machine_models folders.
 
 ## PINN implementation structure
 As explained in the paper, the PINN integration is very modular: any component can be captured, and a simulation can include multiple components captured by a PINN. PINNs accurately capture single-component dynamics considering the interaction with the system and thus can be included in a plug-and-play fashion. We envision a library of PINNs that can improve the simulations' accuracy and speed by capturing the trained components more accurately for larger time step sizes. See the following figure.
@@ -47,7 +48,7 @@ As explained in the paper, the PINN integration is very modular: any component c
 </p>
 
 ## Simulation Tables
-The following tables include more detailed information on the results provided in the paper. These values are obtained by comparing the traditional and hybrid files to the true file in the Simulations folder.
+The following tables include more detailed information on the results provided in the paper. These values are obtained by comparing the traditional and hybrid files to the true file in the simulations "Saved_sims" folder, using the check_accuracy file to compare the numerical results and calculate the accuracy improvements.
 #### IEEE 30-Bus System ($L^{20}_{+0.08}$)
 | Variable  | Value (%)  | Variable  | Value (%)  | Variable  | Value (%)  | Variable  | Value (%)  | Variable  | Value (%)  | Variable  | Value (%)  |
 |-----------|--------|-----------|--------|-----------|--------|-----------|--------|-----------|--------|-----------|--------|
