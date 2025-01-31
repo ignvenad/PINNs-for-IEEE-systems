@@ -6,38 +6,14 @@ class case_pglib_sys:
         self.study_case = sys_sel
         possible_systems = ["case9_ieee", "case14_ieee", "case30_ieee"]
         assert self.study_case in possible_systems
-        if self.study_case == "case9_ieee":
-            self.load_system_hardcoded()
-            self.pf_double_check = False
-        else:
-            self.load_system()
-            self.pf_double_check = True
+        self.load_system()
+        self.pf_double_check = True
 
     def to_complex(self, x):
         x = x.replace(" ", "").replace("im", "j")
         if x in ["0", "0.0", "0.0+0.0j", "0+0j"]:
             return 0.0
         return complex(x)
-
-    def load_system_hardcoded(self):
-        self.Y_adm = np.array([  [-17.361j, 0, 0, 17.361j, 0, 0, 0, 0, 0],
-                        [0, -16j, 0, 0, 0, 0, 16j, 0, 0],
-                        [0, 0, -17.065j, 0, 0, 0, 0, 0, 17.065j],
-                        [17.361j, 0, 0, 3.307-39.309j, -1.365+11.604j, -1.942+10.511j, 0, 0, 0],
-                        [0, 0, 0, -1.365+11.604j, 2.553-17.338j, 0, -1.188+5.975j, 0, 0],
-                        [0, 0, 0, -1.942+10.511j, 0, 3.224-15.841j, 0, 0, -1.282+5.588j],
-                        [0, 16j, 0, 0, -1.188+5.975j, 0, 2.805-35.446j, -1.617+13.698j, 0],
-                        [0, 0, 0, 0, 0, 0, -1.617+13.698j, 2.772-23.303j, -1.155+9.784j],
-                        [0, 0, 17.065j, 0, 0, -1.282+5.588j, 0, -1.155+9.784j, 2.437-32.154j]], dtype=np.complex128)
-        self.slack_bus = 0
-        self.pv_buses = np.array([1, 2])
-        self.pg_buses = np.array([3, 4, 5, 6, 7, 8])
-        self.vm_array = np.array([1.04, 1.025, 1.025, 1., 1., 1., 1., 1., 1.])
-        self.va_array = np.array([0., 0., 0., 0., 0., 0., 0., 0., 0])
-        self.pg_array = np.array([1., 1.63, 0.85, 0., 0., 0., 0., 0., 0.])
-        self.qg_array = np.array([0., 0., 0., 0., 0., 0., 0., 0., 0.])
-        self.pl_array = np.array([0, 0, 0, 0, 1.25, 0.9, 0, 1, 0])
-        self.ql_array = np.array([0, 0, 0, 0, 0.5, 0.3, 0, 0.35, 0])
 
     def load_system(self):
 

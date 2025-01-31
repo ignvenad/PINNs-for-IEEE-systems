@@ -15,6 +15,20 @@ To install the latest on GitHub:
 pip install git+https://github.com/ignvenad/PINNs-for-IEEE-systems
 ```
 
+## Run configuration
+The present implementation supports the available IEEE 9-, 14-, and 30-bus test systems. 
+We support two types of network disturbances: load and mechanical torque. These can be implemented with the fault type, fault time, fault magnitude, and fault bus location.
+To include the PINN in any of the simulations, add the bus number of the dynamic component to be represented by a PINN in the pinn_models_list. In the paper, we considered a PINN for bus 2 in the 9-bus system and bus 1 in the 14- and 30-bus systems.
+The sim_time and sim_time_step apply the desired simulation time and time step size, respectively.
+Different plots can be selected in the post-processing module.
+
+## PINN implementation structure
+As explained in the paper, the PINN integration is very modular: any component can be captured, and a simulation can include multiple components captured by a PINN. PINNs accurately capture single-component dynamics considering the interaction with the system and thus can be included in a plug-and-play fashion. We envision a library of PINNs that can improve the simulations' accuracy and speed by capturing the trained components more accurately for larger time step sizes. See the following figure.
+
+<p align="center">
+<img align="middle" src="./Assets/structure.jpg" alt="ODE Demo" width="800" height="450" />
+</p>
+
 ## Figures for the IEEE 30-bus System $L^{20}_{+0.08}$ simulation
 
 ### Voltage evolution
